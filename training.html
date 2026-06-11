@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananda Shankar Jayant</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* TRAINING SECTION */
+
+        .training-section {
+            padding-top: 60px;
+        }
+
+        .main-training-card {
+            background: #f4f0eb;
+            border: 1px solid #999;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .top-strip {
+            height: 110px;
+            background: #f4f0eb;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 0 40px;
+        }
+
+        .top-strip img {
+            width: 45px;
+        }
+
+        .top-strip span {
+            font-size: 24px;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card-content {
+            background: #d7c0a4;
+            min-height: 420px;
+            display: flex;
+            position: relative;
+        }
+
+        .content-left {
+            width: 50%;
+            padding: 50px 40px;
+        }
+
+        .content-left h2 {
+            font-size: 70px;
+            line-height: 1;
+            color: #2f3d38;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .content-left h2 span {
+            display: block;
+            font-weight: 700;
+        }
+
+        .content-left p {
+            margin-top: 25px;
+            color: #fff;
+            font-size: 18px;
+            max-width: 280px;
+        }
+
+        .schedule-pill {
+            width: 220px;
+            text-align: center;
+            background: white;
+            border-radius: 50px;
+            padding: 10px;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+        .content-image {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .content-image img {
+            width: 100%;
+            max-width: 420px;
+            object-fit: contain;
+            transition: .5s;
+        }
+
+        .main-training-card:hover .content-image img {
+            transform: scale(1.05);
+        }
+
+        .bottom-info {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 40px;
+            background: #f4f0eb;
+        }
+
+        .bottom-info h6 {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .bottom-info p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* RIGHT CARDS */
+
+        .mini-training-card {
+            background: #f8f8f8;
+            border: 1px solid #999;
+            border-radius: 20px;
+            padding: 25px;
+            transition: .4s;
+            overflow: hidden;
+        }
+
+        .mini-training-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .08);
+        }
+
+        .mini-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .mini-text {
+            flex: 1;
+        }
+
+        .mini-text small {
+            color: #666;
+            font-size: 18px;
+        }
+
+        .mini-text h3 {
+            font-size: 48px;
+            color: #c7a98c;
+            font-family: 'Cormorant Garamond', serif;
+            margin: 10px 0;
+        }
+
+        .mini-text p {
+            color: #444;
+            max-width: 420px;
+        }
+
+        .info-line {
+            margin-top: 15px;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .mini-image {
+            width: 320px;
+            height: 240px;
+            overflow: hidden;
+            border-radius: 120px;
+            flex-shrink: 0;
+        }
+
+        .mini-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .mini-training-card:hover .mini-image img {
+            transform: scale(1.08);
+        }
+
+        /* MOBILE */
+
+        @media(max-width:991px) {
+
+            .card-content {
+                flex-direction: column;
+            }
+
+            .content-left,
+            .content-image {
+                width: 100%;
+            }
+
+            .content-left h2 {
+                font-size: 50px;
+            }
+
+            .bottom-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .mini-content {
+                flex-direction: column;
+            }
+
+            .mini-image {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="/assets/mandala/patti.png" width="100%" alt="">
+    </header>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-bg">
+                    <img src="/assets/mudras/logo.png" class="logo" alt="">
+                </div>
+                <span class="brand">Ananda</span>
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                ☰
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="menu">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productions.html">Productions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="training.html">Training</a></li>
+                    <li class="nav-item"><a class="nav-link" href="media.html">Media</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <a href="#" class="book-btn d-none d-lg-block">
+                Admissions →
+            </a>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="training-section py-5">
+
+            <div class="row g-4 align-items-stretch">
+
+                <!-- LEFT FEATURE CARD -->
+                <div class="col-lg-6">
+
+                    <div class="main-training-card">
+
+                        <div class="top-strip">
+                            <img src="assets/mudras/mudra6.png" alt="">
+                            <span>Shankarananda Kalakshetra</span>
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="content-left">
+                                <h2>
+                                    Kalakshetra style of
+                                    <span>Bharatanatyam</span>
+                                </h2>
+
+                                <p>
+                                    Start your classical dance journey with structured
+                                    training under experienced instructors.
+                                </p>
+
+                                <div class="schedule-pill">
+                                    Every Weekend
+                                </div>
+
+                                <div class="schedule-pill">
+                                    Start From 8:00 AM
+                                </div>
+                            </div>
+
+                            <div class="content-image">
+                                <img src="assets/training01.png" alt="">
+                            </div>
+
+                        </div>
+
+                        <div class="bottom-info">
+
+                            <div>
+                                <h6>Register Here</h6>
+                                <p>www.anandaacademy.com</p>
+                            </div>
+
+                            <div>
+                                <h6>Got Any Question?</h6>
+                                <p>+91 98765 43210</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE CARDS -->
+                <div class="col-lg-6">
+
+                    <div class="d-flex flex-column gap-4 h-100">
+
+                        <!-- CARD 1 -->
+                        <div class="mini-training-card">
+
+                            <div class="mini-content">
+
+                                <div class="mini-text">
+
+                                    <small>Instructor</small>
+
+                                    <h3>Ananda Nrityam</h3>
+
+                                    <p>
+                                        Learn expressive storytelling through dance,
+                                        rhythm and movement.
+                                    </p>
+
+                                    <div class="info-line">
+                                        📅 Every Saturday • 10:00 AM
+                                    </div>
+
+                                    <div class="info-line">
+                                        👤 Trainer : Senior Faculty
+                                    </div>
+
+                                </div>
+
+                                <div class="mini-image">
+                                    <img src="assets/training/training1.jpg" alt="">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CARD 2 -->
+                        <div class="mini-training-card">
+
+                            <div class="mini-content">
+
+                                <div class="mini-text">
+
+                                    <small>Instructor</small>
+
+                                    <h3>Abhinaya Workshop</h3>
+
+                                    <p>
+                                        Develop facial expressions, stage presence
+                                        and emotional interpretation.
+                                    </p>
+
+                                    <div class="info-line">
+                                        📅 Sunday • 6:30 AM
+                                    </div>
+
+                                    <div class="info-line">
+                                        👤 Trainer : Guest Faculty
+                                    </div>
+
+                                </div>
+
+                                <div class="mini-image">
+                                    <img src="assets/training/training2.jpg" alt="">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
